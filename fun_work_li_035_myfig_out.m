@@ -19,12 +19,12 @@ if plot_n==3;
     exportfig(gcf,img_name_eps,'color','cmyk');
     saveas(gcf,img_name_fig,'fig');    
     set(gcf, 'Color', 'w')
-    export_fig(img_name_jpg,gcf,'-jpg','-CMYK');
+    export_fig(img_name_jpg,gcf,'-zbuffer','-jpg','-CMYK');
     title(' ')
     legend off
     set(gcf, 'Color', 'w')
     set(gca,'FontSize',14)
-    export_fig(img_name_png,gcf,'-png','-CMYK','-q50','-r300');
+    export_fig(img_name_png,gcf,'-png','-zbuffer','-CMYK','-q30','-r200');% mod : 16-Sep-2014 15:39:51
     exportfig(gcf,img_name_eps_sm,'color','cmyk','FontSize',1.5,'LineMode','scaled','LineWidth',1.0,'height',3.5);
     
 else
